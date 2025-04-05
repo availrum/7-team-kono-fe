@@ -41,7 +41,7 @@ jobs:
           aws-region: ap-northeast-2
           
       - name: Debug IAM Identity
-        run: aws sts get-caller-identity
+        run: aws sts get-caller-identity 
         
       - name: Deploy to S3
         run: aws s3 sync ./dist s3://kono-front --delete --exclude "images/*"
